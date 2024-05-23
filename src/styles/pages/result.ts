@@ -1,6 +1,7 @@
-import { styled } from "../stitches.config"
+'use client'
+import { styled } from '@mui/material/styles';
 
-export const ResultContainer = styled('div', {
+export const ResultContainer = styled('div')({
   'body:has(&)': {
     background: '#dbf4f1',
   },

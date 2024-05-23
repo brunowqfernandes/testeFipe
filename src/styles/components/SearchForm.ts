@@ -1,6 +1,7 @@
-import { styled } from "../stitches.config"
+'use client'
+import { styled } from '@mui/material/styles';
 
-export const FormContainer = styled('div', {
+export const FormContainer = styled('div')({
     maxWidth: 600,
     width: '100%',
     padding: '3rem',

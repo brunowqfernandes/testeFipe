@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { globalStyles } from "@/styles/global";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import { ThemeProvider } from '@mui/material/styles';
 
-import theme from '../theme';
-import { getCssText } from "@/styles/stitches.config";
-import { CssBaseline } from "@mui/material";
+import { CssBaseline, GlobalStyles } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "FIPE",
@@ -19,21 +16,15 @@ interface RootLayoutProps {
 export default function RootLayout({
   children
 }: Readonly<RootLayoutProps>) {
-  globalStyles();
   return (
     <html lang="en">
       <head>
-        <style
-          id="stitches"
-          dangerouslySetInnerHTML={{ __html: getCssText() }}
-        />
       </head>
       <body>
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <ThemeProvider theme={theme}>
-            <CssBaseline />
-            {children}
-          </ThemeProvider>
+        <AppRouterCacheProvider>
+          <CssBaseline />
+          <GlobalStyles styles={globalStyles} />
+          {children}
         </AppRouterCacheProvider>
       </body>
     </html>

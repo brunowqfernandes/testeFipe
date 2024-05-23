@@ -1,5 +1,4 @@
 import { Roboto } from 'next/font/google';
-import { globalCss } from "./stitches.config";
 
 const roboto = Roboto({ 
     weight: [ '400', '500', '700'],
@@ -7,7 +6,7 @@ const roboto = Roboto({
 })
 
 
-export const globalStyles = globalCss({
+export const globalStyles = {
     body: {
         '-webkit-font-smoothing': 'antialiased',
         backgroundColor: '#f9f6fc',
@@ -19,4 +18,4 @@ export const globalStyles = globalCss({
         fontFamily: roboto.style.fontFamily,
         fontWeight: 400
     }
-})
+}

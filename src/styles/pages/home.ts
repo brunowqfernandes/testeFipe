@@ -1,6 +1,7 @@
-import { styled } from "../stitches.config"
+'use client'
+import { styled } from '@mui/material/styles';
 
-export const HomeContainer = styled('div', {
+export const HomeContainer = styled('div')({
   display: 'flex',
   minHeight: '100vh',
   flexDirection: 'column',
@@ -16,4 +17,4 @@ export const HomeContainer = styled('div', {
     margin: 0,
     marginBottom: '1rem'
   }
-}) 
+})
