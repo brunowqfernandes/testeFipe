@@ -18,6 +18,9 @@ export function SelectField({label, options, onChange, value, disabled = false} 
           onChange={onChange}
           value={value}
           disabled={disabled}
+          inputProps={{
+            "data-test": "select"
+          }}
         >
           {(options.length > 0) && options.map((item) => {
             return <MenuItem key={item.codigo} value={item.codigo}>{item.nome}</MenuItem>

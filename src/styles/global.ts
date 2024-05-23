@@ -8,7 +8,7 @@ const roboto = Roboto({
 
 export const globalStyles = {
     body: {
-        '-webkit-font-smoothing': 'antialiased',
+        WebkitFontSmoothing: 'antialiased',
         backgroundColor: '#f9f6fc',
         color: '#424242',
         margin: 0,
